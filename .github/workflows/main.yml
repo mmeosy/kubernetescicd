@@ -29,6 +29,10 @@ jobs:
         run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
+      - name: Run Az Command
+        run: |
+          az account show
+          az group list
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
@@ -44,7 +48,4 @@ jobs:
         run: docker login -u ${{ secrets.dockerhubusername }} -p ${{ secrets.dockerhubpassword }}
       - name: docker image push
         run: docker push mmeosy/demo-k8s
-      - name: Run Az Command
-        run: |
-          az account show
-          az group list
+      
