@@ -73,7 +73,7 @@ jobs:
         working-directory: azure-vote
         run: docker build . -t mmeosy/demo-k8s
 
-      - run: sleep 10 seconds
+      - run: sleep 10
       
       
       - name: docker login
