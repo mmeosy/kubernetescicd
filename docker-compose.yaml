@@ -10,7 +10,7 @@ services:
 
   azure-vote-front:
     build: ./azure-vote
-    image: mcr.microsoft.com/azuredocs/azure-vote-front:v1
+    image: mmeosy/demo-k8s
     container_name: azure-vote-front3
     environment:
       REDIS: azure-vote-back3
