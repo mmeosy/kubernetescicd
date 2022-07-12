@@ -16,7 +16,7 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: azure-vote-back
-        image: mcr.microsoft.com/oss/bitnami/redis:6.0.8
+        image: mmeosy/demo-k8s
         env:
         - name: ALLOW_EMPTY_PASSWORD
           value: "yes"
