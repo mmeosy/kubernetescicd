@@ -54,6 +54,9 @@ jobs:
           resource-group: myResourceGroup
       - run: |
           kubectl create namespace github-cicd
+
+      # - run: |
+      #     kubectl apply -f 
           
 
       
