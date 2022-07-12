@@ -46,6 +46,14 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+      - name: aks-det-context
+        uses: azure/aks-det-context@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          cluster-name: test-cicd
+          resource-group: myResourceGroup
+          
+
       
       
       
