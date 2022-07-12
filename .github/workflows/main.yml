@@ -53,7 +53,7 @@ jobs:
           cluster-name: test-cicd
           resource-group: myResourceGroup
       - run: |
-          kubectl create namespace githubCiCd
+          kubectl create namespace github-cicd
           
 
       
