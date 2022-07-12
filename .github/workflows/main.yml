@@ -45,8 +45,7 @@ jobs:
       # - run: |
       #     kubectl create namespace github-cicd
 
-      - run: |
-          kubectl apply -f azure-vote-all-in-one-redis.yaml
+      
           
 
       
@@ -56,20 +55,32 @@ jobs:
         run: |
           az account show
           az group list
+      
       - name: Run a multi-line script
         if: always()
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      
+      
       - name: docker version
         run: |
           docker -v
           docker
+      
+      
       - name: docker build
         working-directory: azure-vote
         run: docker build . -t mmeosy/demo-k8s
+      
+      
       - name: docker login
         run: docker login -u ${{ secrets.dockerhubusername }} -p ${{ secrets.dockerhubpassword }}
+      
+      
       - name: docker image push
         run: docker push mmeosy/demo-k8s
       
+
+      - run: |
+          kubectl apply -f azure-vote-all-in-one-redis.yaml
