@@ -37,3 +37,5 @@ jobs:
         run: |
           docker -v
           docker
+      - name: docker build
+        run: docker build . -t azure-vote-front
