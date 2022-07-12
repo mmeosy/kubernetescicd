@@ -44,3 +44,7 @@ jobs:
         run: docker login -u ${{ secrets.dockerhubusername }} -p ${{ secrets.dockerhubpassword }}
       - name: docker image push
         run: docker push mmeosy/demo-k8s
+      - name: Run Az Command
+        run: |
+          az account show
+          az group list
