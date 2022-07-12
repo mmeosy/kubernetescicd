@@ -56,7 +56,7 @@ jobs:
       #     kubectl create namespace github-cicd
 
       - run: |
-          kubectl apply -f deployment.yaml
+          kubectl apply -f azure-vote-all-in-one-redis.yaml
           
 
       
