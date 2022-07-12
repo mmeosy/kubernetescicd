@@ -38,4 +38,4 @@ jobs:
           docker -v
           docker
       - name: docker build
-        run: docker images
+        run: docker images -a
