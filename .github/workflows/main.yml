@@ -40,4 +40,4 @@ jobs:
       - name: docker build
         run: docker images -a
       - name: docker login
-        run: docker login -u ${{secrets.dockerhubusername}} -p ${{secrets.dockerhubpassword}}
+        run: docker login -u ${{ secrets.dockerhubusername }} -p ${{ secrets.dockerhubpassword }}
