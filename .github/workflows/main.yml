@@ -28,7 +28,7 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      - name: build docker compuse
+      - name: build docker compose
         run: docker-compose up --build -d
       
       - name: az login
