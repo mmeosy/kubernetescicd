@@ -71,7 +71,7 @@ jobs:
       
       - name: docker build
         working-directory: azure-vote
-        run: docker build . -t mmeosy/demo-k8s
+        run: docker build . -t mmeosy/demo-k8s:latest
 
       - run: sleep 10
       
