@@ -52,11 +52,11 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
           cluster-name: test-cicd
           resource-group: myResourceGroup
-      - run: |
-          kubectl create namespace github-cicd
-
       # - run: |
-      #     kubectl apply -f 
+      #     kubectl create namespace github-cicd
+
+      - run: |
+          kubectl apply -f deployment.yaml
           
 
       
