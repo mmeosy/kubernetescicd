@@ -46,12 +46,14 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: aks-det-context
+      - name: aks-set-context
         uses: azure/aks-set-context@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
           cluster-name: test-cicd
           resource-group: myResourceGroup
+      - run: |
+          kubectl create namespace githubCiCd
           
 
       
